@@ -1,6 +1,6 @@
 # InfoBox para SA-MP
 
-Um sistema de InfoBox para o San Andreas Multiplayer (SA-MP) que permite exibir mensagens personalizadas na tela dos jogadores.
+Uma INCLUDE de InfoBox para o San Andreas Multiplayer (SA-MP) e Open Multiplayer (OMP) que permite exibir mensagens personalizadas na tela dos jogadores.
 
 ## Descrição
 
