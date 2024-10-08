@@ -65,3 +65,7 @@ Contribuições são bem-vindas! Para contribuir com este projeto, siga as etapa
 ## Licença
 
 Este projeto é licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Atualizações
+
+A biblioteca pode sofrer atualizações e mudanças ao longo do tempo. Fique atento às notas de versão e melhorias que podem ser implementadas para garantir a melhor experiência possível.
