@@ -4,8 +4,8 @@
  *                             by Collw
  *                       V 1.0 - Build 1.09.865
  *
- * Descrição: Este include fornece funcionalidades para criar e gerenciar
- *            InfoBoxes (Notificações em TextDraws) no SA-MP.
+ * DescriÃ§Ã£o: Este include fornece funcionalidades para criar e gerenciar
+ *            InfoBoxes (NotificaÃ§Ãµes em TextDraws) no SA-MP.
  * Link do GitHub: https://github.com/Collw
  * ----------------------------------------------------------------------
  */
@@ -16,30 +16,15 @@
 
 #include <a_samp>
 
-// Definição do máximo de TextDraws permitidos
+// DefiniÃ§Ã£o do mÃ¡ximo de TextDraws permitidos
 #define MAX_INFOBOX 10
 #define MAX_PLAYERS 1000
 
-// Declaração das variáveis globais
+// DeclaraÃ§Ã£o das variÃ¡veis globais
 new Text:infoboxTD[MAX_INFOBOX];  // Armazena os TextDraws
 new currentTextDraw = 0;          // Contador de TextDraws atualmente em uso
 
-public OnGameModeInit() 
-    {
-		#if defined infobx_OnGameModeInit
-			infobox_OnGameModeInit();
-		#endif
-print(" ===============================");
-print("      Infobox Include loaded.");
-print("         Version:  1.0.0");
-print("       (C) 2024 Collw Cole");
-print(" ===============================");
-
-		return 1;
-	}
-
-
-// Função para criar a InfoBox
+// FunÃ§Ã£o para criar a InfoBox
 public CreateInfoBox(playerid, text[])
 {
     if (currentTextDraw >= MAX_INFOBOX) return; // Limita a 10 TextDraws
@@ -65,19 +50,19 @@ public CreateInfoBox(playerid, text[])
 
     // Exibe o TextDraw para o jogador
     TextDrawShowForPlayer(playerid, infoboxTD[currentTextDraw]);
-    PlayerPlaySound(playerid, 6401, 0.0, 0.0, 0.0); // Som de notificação
+    PlayerPlaySound(playerid, 6401, 0.0, 0.0, 0.0); // Som de notificaÃ§Ã£o
     
-    // Agenda a destruição do TextDraw após 7 segundos
+    // Agenda a destruiÃ§Ã£o do TextDraw apÃ³s 7 segundos
     SetTimer("DestroyInfoBox", 7000, false);
 
-    currentTextDraw++; // Incrementa o índice de TextDraws
+    currentTextDraw++; // Incrementa o Ã­ndice de TextDraws
 }
 
-// Função para destruir o TextDraw mais antigo
+// FunÃ§Ã£o para destruir o TextDraw mais antigo
 public DestroyInfoBox()
 {
     if (currentTextDraw > 0) {
-        currentTextDraw--; // Decrementa o índice
+        currentTextDraw--; // Decrementa o Ã­ndice
         
         // Destroi o TextDraw para todos os jogadores conectados
         for (new playerId = 0; playerId < MAX_PLAYERS; playerId++) {
