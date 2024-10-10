@@ -51,6 +51,7 @@ Aqui está um exemplo de comando que exibe uma InfoBox para o jogador:
 CMD:infobox(playerid, params[]) {
     new text[] = "Bem-vindo ao servidor!";
     CreateInfoBox(playerid, text);
+return 1;
 }
 ```
 
